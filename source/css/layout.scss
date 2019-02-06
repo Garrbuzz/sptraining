@@ -1,0 +1,10 @@
+.grid-10-12{
+	display:grid;
+	grid-template-columns: 10% repeat(10, 1fr) 10%;
+}
+.flex-wrap-center{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
