@@ -62,7 +62,7 @@ function html() {
 }
 function php() {
 	return gulp.src('./source/php/**/*.php')
-		.pipe(gulp.dest('./www/js'))
+		.pipe(gulp.dest('./www/php'))
 }
 function img() {
 	return gulp.src('./source/img/**/*.*')
