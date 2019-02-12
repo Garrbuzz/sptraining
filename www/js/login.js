@@ -5,7 +5,7 @@ window.onload = function(){
 		let pass = document.querySelector('#pass');
 	
 		
-		fetch('./php/test.php', {method:"POST", headers: { "Content-type": "application/x-www-form-urlencoded; charset=UTF-8" }, body: "name=" + encodeURIComponent(name.value) + "&pass=" + encodeURIComponent(pass.value)})  
+		fetch('./php/login.php', {method:"POST", headers: { "Content-type": "application/x-www-form-urlencoded; charset=UTF-8" }, body: "name=" + encodeURIComponent(name.value) + "&pass=" + encodeURIComponent(pass.value)})  
 		  .then(  
 		    function(response) {  
 		      if (response.status !== 200) {  
@@ -16,7 +16,11 @@ window.onload = function(){
 
 		      // Examine the text in the response  
 		      response.json().then(function(data) {  
-		        console.log(data);  
+		        if(data){
+
+		        } else {
+		        	alert('Не правильное имя пользователя или пароль.');
+		        }
 		      });  
 		    }  
 		  )  
